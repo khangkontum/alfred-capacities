@@ -4,7 +4,7 @@
 import sys
 import json
 import time
-from workflow import Workflow, web, PasswordNotFound
+from workflow import Workflow, web
 
 API_BASE = "https://api.capacities.io"
 
@@ -13,7 +13,7 @@ SPACE_INFO_CACHE_KEY = "space_info_cache"
 SPACE_INFO_CACHE_TTL = 3600  # 1 hour cache
 RATE_LIMIT_KEY = "space_info_rate_limit"
 RATE_LIMIT_WINDOW = 60  # 1 minute
-RATE_LIMIT_MAX_REQUESTS = 4  # Conservative limit (API allows 5)
+RATE_LIMIT_MAX_REQUESTS = 4  # API allows 5
 
 
 def get_api_token(wf):
@@ -32,11 +32,7 @@ def get_api_token(wf):
     if token:
         return token
 
-    # Fallback to keychain
-    try:
-        return wf.get_password("capacities_api_token")
-    except PasswordNotFound:
-        return None
+    return None
 
 
 def get_default_space_id(wf):
@@ -124,7 +120,7 @@ def get_cached_space_info(wf, space_id):
 
 def get_object_type_name(wf, space_id, structure_id):
     """Get the human-readable name for an object type (structure)"""
-    # Handle built-in types first (these are fast)
+    # Handle built-in types first
     builtin_types = {
         "RootDailyNote": "Daily Note",
         "RootPage": "Page",
@@ -406,8 +402,6 @@ def save_to_daily_note(wf, text):
     )
 
 
-
-
 def show_help(wf):
     commands = [
         ("cap <query>", "Search content (3+ chars, auto-delayed)"),
@@ -485,7 +479,6 @@ def main(wf):
         if len(parts) >= 2:
             text = parts[1]
             save_to_daily_note(wf, text)
-    # Old commands removed - now they can be search terms
     # Handle separate script filter commands
     elif command_lower == "caps":
         # Handle "caps url title" from separate script filter
