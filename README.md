@@ -4,7 +4,7 @@ Alfred workflow for interacting with Capacities - search, save weblinks, and add
 
 ## Installation
 
-1. Download the latest release from GitHub
+1. Download the latest release from [GitHub Releases](https://github.com/khangkontum/alfred-capacities/releases)
 2. Double-click the `.alfredworkflow` file to install
 3. Configure your API token in Alfred workflow settings
 
