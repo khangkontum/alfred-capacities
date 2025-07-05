@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>HOTKEY-CAP-SEARCH-UUID</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>04C7BF8A-B873-42BB-8AAF-F14F9BB4C053</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>me@nhkhang.com</string>
@@ -262,6 +275,37 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array/>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>HOTKEY-CAP-SEARCH-UUID</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -302,6 +346,15 @@
 			<key>ypos</key>
 			<real>435</real>
 		</dict>
+		<key>HOTKEY-CAP-SEARCH-UUID</key>
+		<dict>
+			<key>note</key>
+			<string>Hotkey trigger for quick search</string>
+			<key>xpos</key>
+			<real>230</real>
+			<key>ypos</key>
+			<real>205</real>
+		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array>
@@ -338,6 +391,23 @@
 			<string>textfield</string>
 			<key>variable</key>
 			<string>default_space_id</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>placeholder</key>
+				<string>Set hotkey for quick search</string>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string>Configure a hotkey to quickly open Capacities search. Click "Hotkey" field and press your desired key combination.</string>
+			<key>label</key>
+			<string>Quick Search Hotkey</string>
+			<key>type</key>
+			<string>hotkey</string>
+			<key>variable</key>
+			<string>cap_search_hotkey</string>
 		</dict>
 	</array>
 	<key>variables</key>

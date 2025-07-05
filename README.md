@@ -15,6 +15,7 @@ Alfred workflow for interacting with Capacities - search, save weblinks, and add
 ```
 cap <query>
 ```
+Or use the configurable hotkey for quick access (see Configuration below)
 
 **Save Weblink**
 
@@ -39,6 +40,11 @@ capn <text>
 
 **Optional: Default Space ID**
 In Alfred workflow settings, set "Default Space ID" field (get ID from Capacities app)
+
+**Optional: Quick Search Hotkey**
+1. In Alfred workflow settings, click the "Quick Search Hotkey" field
+2. Press your desired key combination (e.g., ⌥+Space, ⌘+Shift+C)
+3. The hotkey will open Alfred with "cap " pre-filled for quick note searching
 
 ## Troubleshooting
 
